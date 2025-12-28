@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #e8f4ff;
+}
+
+.container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 18px;
+  background: white;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: #0b67c2;
+}
+
+.tagline {
+  text-align: center;
+  color: #444;
+  font-size: 14px;
+}
+
+.divider {
+  text-align: center;
+  margin: 12px 0;
+  color: #555;
+}
+
+.inviteBox {
+  display: flex;
+  gap: 8px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #9bc8ff;
+  border-radius: 6px;
+  flex: 1;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+}
+
+.primary {
+  background: #4aa3ff;
+  color: white;
+}
+
+.secondary {
+  background: #0b67c2;
+  color: white;
+}
+
+.outline {
+  background: white;
+  border: 1px solid #4aa3ff;
+  color: #0b67c2;
+}
+
+.danger {
+  background: #ff5b5b;
+  color: white;
+}
+
+#messages {
+  height: 55vh;
+  overflow-y: auto;
+  margin: 12px 0;
+  padding: 10px;
+  background: #f2f7ff;
+  border-radius: 10px;
+}
+
+.msg {
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  border-radius: 10px;
+}
+
+.me {
+  background: #4aa3ff;
+  color: white;
+  text-align: right;
+}
+
+.other {
+  background: white;
+  border: 1px solid #cfe4ff;
+}
+
+.chatInput {
+  display: flex;
+  gap: 8px;
+}
+
+.hidden {
+  display: none;
+}
