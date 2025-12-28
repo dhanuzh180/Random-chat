@@ -76,3 +76,4 @@ async function recoverPassword() {
   const reply = await res.json();
   statusBox.textContent = reply.message;
 }
+
