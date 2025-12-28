@@ -14,7 +14,9 @@
   <h2>Welcome</h2>
   <p class="sub">Login or create an account</p>
 
-  <!-- Login Form -->
+  <p id="status" class="status"></p>
+
+  <!-- Login Box -->
   <div id="loginBox">
 
     <input id="loginEmail" type="email" placeholder="Email">
@@ -24,17 +26,24 @@
 
     <p class="link" onclick="showSignup()">Create new account</p>
     <p class="link" onclick="showForgot()">Forgot password?</p>
+
+    <div class="divider">OR</div>
+
+    <div id="googleBtn" class="btn outline">Login with Google</div>
   </div>
 
 
-  <!-- Signup Form -->
+  <!-- Signup Box -->
   <div id="signupBox" class="hidden">
 
     <input id="signupUsername" type="text" placeholder="Username">
     <input id="signupEmail" type="email" placeholder="Email">
     <input id="signupPassword" type="password" placeholder="Password">
 
-    <button class="btn secondary" onclick="signupUser()">Create Account</button>
+    <button class="btn secondary" onclick="sendOtp()">Send OTP</button>
+
+    <input id="otpInput" type="text" placeholder="Enter OTP" class="hidden">
+    <button id="verifyOtpBtn" class="btn primary hidden" onclick="signupUser()">Verify & Create Account</button>
 
     <p class="link" onclick="showLogin()">Back to login</p>
   </div>
@@ -44,13 +53,10 @@
   <div id="forgotBox" class="hidden">
 
     <input id="forgotEmail" type="email" placeholder="Enter your email">
-
     <button class="btn outline" onclick="recoverPassword()">Recover Password</button>
 
     <p class="link" onclick="showLogin()">Back to login</p>
   </div>
-
-  <p id="status" class="status"></p>
 
 </div>
 
