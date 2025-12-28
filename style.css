@@ -1,66 +1,142 @@
 body {
   margin: 0;
-  background: #e8f4ff;
   font-family: Arial;
 }
 
-.container {
-  max-width: 420px;
-  margin: 0 auto;
-  padding: 20px;
+/* -------- LOGIN PAGE -------- */
+
+.auth-body {
+  background: linear-gradient(#aee1ff, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-box {
   background: white;
-  min-height: 100vh;
-}
-
-h2 {
+  padding: 25px;
+  border-radius: 18px;
+  width: 90%;
+  max-width: 360px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.1);
   text-align: center;
-  color: #0b67c2;
 }
 
-.sub {
-  text-align: center;
-  color: #555;
-  font-size: 14px;
+.auth-box h2 {
+  color: #1d7ed6;
 }
 
-input {
+.auth-box input {
   width: 100%;
+  padding: 12px;
   margin-top: 10px;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #9bc8ff;
+  border-radius: 10px;
+  border: 1px solid #bcd8f5;
 }
 
-.btn {
+.auth-box button {
   width: 100%;
-  margin-top: 12px;
   padding: 12px;
-  border-radius: 8px;
+  margin-top: 12px;
+  border-radius: 10px;
+  background: #1d7ed6;
+  color: white;
   border: none;
-  font-size: 15px;
 }
 
-.primary { background: #4aa3ff; color: white; }
-.secondary { background: #0b67c2; color: white; }
-.outline { background: white; border: 1px solid #4aa3ff; color: #0b67c2; }
+.secondary {
+  background: #9ec9ff;
+}
 
 .link {
-  text-align: center;
-  color: #0b67c2;
-  cursor: pointer;
+  color: #1d7ed6;
   margin-top: 8px;
-}
-
-.hidden { display: none; }
-
-.status {
-  text-align: center;
-  margin-bottom: 8px;
-  font-size: 14px;
+  cursor: pointer;
 }
 
 .divider {
-  text-align: center;
-  margin: 10px 0;
-  color: #666;
+  border-top: 1px solid #d9e8ff;
+  margin: 12px 0;
+}
+
+/* -------- CHAT PAGE -------- */
+
+.chat-body {
+  background: #e8f4ff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  background: #1d7ed6;
+  color: white;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.invite-btn {
+  background: white;
+  color: #1d7ed6;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+}
+
+.invite-box {
+  padding: 10px;
+  background: #dff0ff;
+}
+
+.hidden {
+  display: none;
+}
+
+.chat-window {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+}
+
+/* message bubbles */
+.msg {
+  padding: 10px 12px;
+  border-radius: 12px;
+  max-width: 70%;
+  margin-bottom: 10px;
+}
+
+.me {
+  background: #cfe6ff;
+  margin-left: auto;
+}
+
+.other {
+  background: white;
+  border: 1px solid #d6e7ff;
+}
+
+.chat-input-bar {
+  display: flex;
+  gap: 6px;
+  padding: 10px;
+  background: white;
+}
+
+.chat-input-bar input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #bdd9ff;
+}
+
+.chat-input-bar button {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  background: #1d7ed6;
+  color: white;
 }
