@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Random Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h2>Welcome</h2>
+  <p class="sub">Login or create an account</p>
+
+  <!-- Login Form -->
+  <div id="loginBox">
+
+    <input id="loginEmail" type="email" placeholder="Email">
+    <input id="loginPassword" type="password" placeholder="Password">
+
+    <button class="btn primary" onclick="loginUser()">Login</button>
+
+    <p class="link" onclick="showSignup()">Create new account</p>
+    <p class="link" onclick="showForgot()">Forgot password?</p>
+  </div>
+
+
+  <!-- Signup Form -->
+  <div id="signupBox" class="hidden">
+
+    <input id="signupUsername" type="text" placeholder="Username">
+    <input id="signupEmail" type="email" placeholder="Email">
+    <input id="signupPassword" type="password" placeholder="Password">
+
+    <button class="btn secondary" onclick="signupUser()">Create Account</button>
+
+    <p class="link" onclick="showLogin()">Back to login</p>
+  </div>
+
+
+  <!-- Forgot Password -->
+  <div id="forgotBox" class="hidden">
+
+    <input id="forgotEmail" type="email" placeholder="Enter your email">
+
+    <button class="btn outline" onclick="recoverPassword()">Recover Password</button>
+
+    <p class="link" onclick="showLogin()">Back to login</p>
+  </div>
+
+  <p id="status" class="status"></p>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
