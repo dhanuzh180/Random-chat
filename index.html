@@ -1,57 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Random Chat</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Login | Random Chat</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
+<body class="auth-body">
 
-  <div class="container">
+  <div class="auth-box">
+    <h2>Welcome to Sky Chat</h2>
 
-    <h1>Random Chat</h1>
-    <p class="tagline">Chat with a random person. Messages disappear when you leave.</p>
+    <input type="text" id="username" placeholder="Enter Username" />
+    <input type="password" id="password" placeholder="Enter Password" />
 
-    <!-- Home Screen -->
-    <div id="homeScreen">
+    <button onclick="loginUser()">Login</button>
 
-      <button id="randomChatBtn" class="btn primary">Start Random Chat</button>
+    <p class="link" onclick="alert('Password reset feature coming soon.')">
+      Forgot password?
+    </p>
 
-      <div class="divider">OR</div>
+    <div class="divider"></div>
 
-      <div class="inviteBox">
-        <input id="codeInput" type="text" placeholder="Enter chat code">
-        <button id="joinCodeBtn" class="btn secondary">Join Chat</button>
-      </div>
-
-      <button id="createCodeBtn" class="btn outline">
-        Invite a Friend (Generate Code)
-      </button>
-    </div>
-
-
-    <!-- Chat Screen -->
-    <div id="chatScreen" class="hidden">
-
-      <p id="chatCodeText"></p>
-
-      <div id="messages"></div>
-
-      <div class="chatInput">
-        <input id="msgInput" type="text" placeholder="Type a message">
-        <button id="sendBtn" class="btn primary">Send</button>
-      </div>
-
-      <button id="leaveBtn" class="btn danger">Leave Chat</button>
-    </div>
-
+    <button class="secondary" onclick="alert('Google Login not enabled yet.')">
+      Login with Email
+    </button>
   </div>
 
-  <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
-  <script src="script.js"></script>
+  <script>
+    function loginUser() {
+      const name = document.getElementById("username").value.trim();
 
+      if (!name) {
+        alert("Please enter username");
+        return;
+      }
+
+      // store in local memory (temporary)
+      localStorage.setItem("chatUser", name);
+
+      window.location.href = "chat.html";
+    }
+  </script>
 </body>
 </html>
