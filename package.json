@@ -1,0 +1,12 @@
+{
+  "name": "sky-chat",
+  "version": "1.0.0",
+  "description": "Random chat application with sky blue theme",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'Static site - no build required'"
+  },
+  "keywords": ["chat", "random", "supabase"],
+  "author": "",
+  "license": "MIT"
+}

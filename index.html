@@ -1,46 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Login | Random Chat</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky Chat - Random Chat with Friends</title>
+  <meta http-equiv="refresh" content="0; url=auth.html">
 </head>
-
-<body class="auth-body">
-
-  <div class="auth-box">
-    <h2>Welcome to Sky Chat</h2>
-
-    <input type="text" id="username" placeholder="Enter Username" />
-    <input type="password" id="password" placeholder="Enter Password" />
-
-    <button onclick="loginUser()">Login</button>
-
-    <p class="link" onclick="alert('Password reset feature coming soon.')">
-      Forgot password?
-    </p>
-
-    <div class="divider"></div>
-
-    <button class="secondary" onclick="alert('Google Login not enabled yet.')">
-      Login with Email
-    </button>
-  </div>
-
+<body>
   <script>
-    function loginUser() {
-      const name = document.getElementById("username").value.trim();
-
-      if (!name) {
-        alert("Please enter username");
-        return;
-      }
-
-      // store in local memory (temporary)
-      localStorage.setItem("chatUser", name);
-
-      window.location.href = "chat.html";
-    }
+    window.location.href = 'auth.html';
   </script>
 </body>
 </html>

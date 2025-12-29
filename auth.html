@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky Chat - Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+
+  <div class="auth-container">
+    <div class="auth-box">
+      <h1 class="auth-title">Sky Chat</h1>
+      <p class="auth-subtitle">Connect with random people around the world</p>
+
+      <div id="statusMessage" class="status-message hidden"></div>
+
+      <!-- Login Form -->
+      <div id="loginForm" class="form-container">
+        <input type="email" id="loginEmail" placeholder="Email" class="auth-input" />
+        <input type="password" id="loginPassword" placeholder="Password" class="auth-input" />
+        <button onclick="handleLogin()" class="btn btn-primary">Login</button>
+
+        <p class="form-switch">
+          Don't have an account? <span onclick="showSignup()" class="link">Sign up</span>
+        </p>
+      </div>
+
+      <!-- Signup Form -->
+      <div id="signupForm" class="form-container hidden">
+        <input type="text" id="signupUsername" placeholder="Username" class="auth-input" />
+        <input type="email" id="signupEmail" placeholder="Email" class="auth-input" />
+        <input type="password" id="signupPassword" placeholder="Password (min 6 characters)" class="auth-input" />
+        <button onclick="handleSignup()" class="btn btn-primary">Create Account</button>
+
+        <p class="form-switch">
+          Already have an account? <span onclick="showLogin()" class="link">Login</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="auth.js"></script>
+</body>
+</html>
